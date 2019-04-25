@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+       
+        /*NAVIGACIJA*/
+        body {
+            margin: 2px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .nav
+        {
+            overflow: hidden;
+            background-color: black;
+        }
+        .nav a 
+        {
+            float: right;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .nav a:hover 
+        {
+            background-color: #ddd;
+            color: black;
+        }
+        .nav a.active 
+        {
+            background-color: lightseagreen;
+            color: white;
+        }
+        /*HOME SLIKA*/
+        .hero-image
+        {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("nature.jpg");
+            height: 700px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        /*STILOVI NASLOVA*/
+        h1 {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        h2 {
+            text-align: center;
+            position: absolute;
+            right: 36.5%;
+            color: dimgray;
+        }
+        h3 {
+            text-align: center;
+            position: center;
+            /*right: 43%;*/
+            color: papayawhip;
+        }
+
+        h4 {
+            text-align: center;
+           
+            position: absolute;
+            right: 38.5%;
+            color: slategrey;
+        }
+
+        /*.main */
+        .main {
+            background-color: honeydew;
+            height: 600px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .container {
+            position: relative;
+            width: 25%;
+            left: 40px;
+            float: left;
+            width: 31%;
+            padding: 5px;
+        }
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .overlay {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: lightseagreen;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+        .container:hover .overlay {
+            bottom: 0;
+            height: 100%;
+        }
+        .text {
+            white-space: nowrap;
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+        * {
+            box-sizing: border-box;
+        }
+       
+        
+        .main::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        @media screen and (max-width: 400px) {
+            .container {
+                width: 100%;
+            }
+        }
+
+
+        /* .section*/
+        .section {
+            background-color: lavenderblush;
+            height: 700px;
+            text-align: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        div.img_0, div.img_1, div.img_2 
+        {
+            width: 32%;
+            background-color: white;
+            box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-bottom: 25px;
+            float: left;
+            padding: 13px;
+
+        }
+        .container1
+        {
+            vertical-align: middle;
+            left:15px;
+            text-align: center;
+            padding: 10px 20px;
+         
+        }
+        .container1::after
+       {
+           content: "";
+           clear: both;
+           display: table;
+              
+       }
+
+        /*.section2*/
+
+
+        
+
+
+
+        .section_2 {
+            background-color: white;
+            width: 100%;
+            height: 700px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            margin: auto;
+            position: relative;
+        }
+        .sec {
+            text-align:center;
+            width: 50%;
+            float: left;
+        }
+
+
+
+        .new_img 
+        {
+            width: 35%;
+            text-align: center;
+            background-color: white;
+            vertical-align: middle;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 20px 6px 0 0 rgba(0, 0, 0, 0.19);
+           
+            padding: 15px;
+        }
+
+        .container2 {
+            vertical-align: middle;
+            left: 15px;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+       /*.tiny*/
+        .tiny {
+            background-color: black;
+            height: 140px;
+            text-align: center;
+        }
+
+        .button {
+            background-color: lightseagreen;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+          
+        }
+
+        .button:hover 
+        {
+                background-color: lightskyblue;
+        }
+
+        /*.left*/
+        .subdiv {
+            float: left;
+            background-color: black;
+            text-align: center;
+            background-color:lightgray;
+        }
+     
+
+        .left {
+            background-color: black;
+            text-align: center;
+            background-color: grey;
+        }
+
+        /*.text_1*/
+        .text_1 {
+            text-align: center;
+            background-color: navajowhite;
+            background-color: black;
+        }
+        .p1 {
+           
+            width: 50%;
+            text-align: center;
+            float: left;
+         
+        }
+        .p2 {
+           
+            width: 50%;
+            text-align: center;
+            float: right;
+        }
+
+        /*.footer
+        .footer {
+            width: 100%;
+            height: 150px;
+            background-color: whitesmoke;
+            margin: auto;
+            text-align: center;
+        }
+
+        .links {
+            float: left;
+        }
+
+        .social {
+            float: right;
+        }
+
+            .social img {
+                margin: 20px 30px 20px 20px;
+            }
+        
+        */
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <img src="bla.jpg" alt="#img" align="middle" height="50px" width="90px" />
+        <a href="#about">About</a>
+        <a href="#search">Search</a>
+        <a href="#contact">Contact</a>
+        <a href="#news">News</a>
+        <a class="active" href="#home">Home</a>
+    </div>
+
+    <div class="hero-image">
+        <h1> Choose only one master – nature </h1>
+    </div>
+
+    <div class="main">
+        <br><br>
+        <h2> Želiš upoznati svijet koji te okružuje?</h2>
+        <br><br><br>
+        <h4>Dobro došao/la, ovo je pravo mjesto za tebe!!</h4>
+        <br><br><br>
+        <hr style="border: 1px solid lightseagreen ; width: 140px;" />
+        <br><br><br>
+
+        <div class="container">
+            <img src="machu-picchu.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <div class="text">Machu Picchu</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="tayland.jpg" alt="Avatar" class="image" height="250px" width="400px" align="left">
+            <div class="overlay">
+                <div class="text">Tayland</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="bora.jpg" alt="Avatar" class="image" height="250px" width="400px">
+            <div class="overlay">
+                <div class="text">Bora-Bora </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <br><br>
+        <h2>  Želiš se povezati s prirodom?  </h2>
+        <br><br><br>
+        <h4> Odaberi način koji ti najviše odgovara!!</h4>
+        <br><br><br>
+        <hr style="border: 1px solid lightseagreen ; width: 140px;" />
+        <br><br><br>
+
+        <div class="img_0">
+            <img src="diving.jpg" alt="#ronjenje" height="250px" width="400px">
+            <div class="container1">
+                <p>Diving</p>
+            </div>
+        </div>
+        &nbsp; &nbsp;  &nbsp;
+        <div class="img_1">
+            <img src="climbing.jpg" alt="#planinarenje" height="250px" width="400px">
+            <div class="container1">
+                <p>Climbing</p>
+            </div>
+        </div>
+        &nbsp; &nbsp;  &nbsp;
+        <div class="img_2">
+            <img src="fly.jpg" alt="#ronjenje" height="250px" width="400px">
+            <div class="container1">
+                <p>Flying</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section_2">
+        <br><br>
+        <h2>  Želiš u pustolovinu, ali nemaš svu opremu?  </h2>
+        <br><br><br>
+        <h4> Posjeti naš OnLineShop </h4>
+        <br><br><br>
+        <hr style="border: 1px solid lightseagreen ; width: 140px;" />
+        <br><br><br>
+        <div class="sec">
+            <p align="center">Neeki paragraaaaaaaaaaaaaaaaf/ swsjjhswjwswj </p>
+        </div>
+        <div class="new_img">
+            <img src="diving.jpg" alt="#ronjenje" height="250px" width="400px">
+            <div class="container2">
+                <p>jebena poravnanja u HTMLU</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="tiny">
+        <br>
+        <h3> Zainteresiran/a si za putovanja? </h3>
+
+        <button type="button" class="button" alert('Hello world!')">Registriraj se!</button>
+
+    </div>
+
+    <div class="left">
+
+        <div class="subdiv" style=" width: 50%">
+            <br><br>
+            <h3> KONTAKTIRAJTE NAS </h3>
+            <br><br>
+            <label for="name" style="color:mistyrose; font-size: 18px">Vaše ime i prezime:</label>
+            <br><br>
+            <input type="text" name="name" size="40">
+            <br><br>
+            <label for="name" style="color:mistyrose; font-size: 18px">Recenzija:</label>
+            <br><br>
+            <input type="text" name="rec" size="40" style="height:200px;">
+            <br><br>
+            <button type="button" class="button">Submit</button>
+            <br><br><br>
+        </div>
+
+        <img src="nja.jpg" alt="#planinarenje" width=50%>
+    </div>
+
+    <div class="text_1">
+
+        <div class="p1" style=" width: 50%">
+
+           <p>Zašto ovo ne radi</p>
+
+        </div>
+
+
+        <div class="p2" style=" width: 50%">
+
+            <p>Neki kratki tekst</p>
+        </div>
+
+      
+
+    </div>
+    
+    <!--<div class="footer">
+
+        <div class="links" style=" width: 50%">
+
+            <h5> INFORMACIJE: </h5>
+            <hr style="border: 1px solid lightpink ; width: 200px;" />
+            <br>
+            <a href="#about">O nama</a> &nbsp;&nbsp;
+            <a href="#about"> Privatnost podataka</a><br>
+            <a href="#about">Uvjeti poslovanja</a>&nbsp;&nbsp;
+
+            <a href="#about">Uvjeti dostave</a><br>
+            <a href="#about">Uvjeti plaćanja</a>
+
+
+        </div>
+
+
+
+        <div class="social" style=" width: 50%">
+
+            <br><br>
+            <a href="default.asp">
+                <img src="face.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0; border-radius: 100%">
+            </a>
+            <a href="default.asp">
+                <img src="inst.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0; border-radius: 100%">
+            </a>
+            <a href="default.asp">
+                <img src="yt.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0; border-radius: 100%">
+            </a>
+            <a href="default.asp">
+                <img src="ne.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0; border-radius: 100%">
+            </a>
+        </div>
+
+        <p align="center"> © 2019 AvantureBat, Inc. </p>
+
+    </div>-->
+
+</body>
+</html>
